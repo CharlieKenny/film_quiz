@@ -1,6 +1,9 @@
-FlickQuiz - a reel good quiz for movie lovers!
+#FlickQuiz - a reel good quiz for movie lovers!
+
+https://drive.google.com/folderview?id=0B2Rum2zEpwhgdlhNcUFnRmFBanM&usp=sharing
 
 User Stories
+-----------
 
 As a bored office worker, so I can waste time at work, I would like to test my movie knowledge
 
@@ -15,6 +18,7 @@ As a regular player, so that I don’t repeat myself, I don’t want to see quiz
 As a social quizzer, so that I can show off, I would like to post my score to Facebook
 
 Bonus Features
+-------------
 
 tracking answered/attempted questions
 leaderboard
@@ -24,6 +28,7 @@ build my own quiz
 quiz timer
 
 Ideas for Basic Quiz Types
+--------------------------
 
 quiz based on movie director  
 movies from a particular year  
