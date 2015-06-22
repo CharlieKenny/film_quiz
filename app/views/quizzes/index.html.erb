@@ -1,2 +1,21 @@
-<h1>Welcome to FlickQuiz</h1>
+<html>
+  <head>
+    <script src="./assets/application.js"></script>
+    <script src="./assets/flickQuiz.js"></script>
+  </head>
 
+  <body>
+
+    <h1>Welcome to FlickQuiz</h1>
+
+    <div id='title'></div>
+    <div id='director'></div>
+
+    Which year: <input id="yearGuess" type="text" name="yearGuess">
+    <input onclick="submitAnswer()"type="submit">
+    <input type="hidden" id="yearAnswer" name="yearAnswer" value="yearAnswer"/>
+
+    <div id='result'></div>
+
+  </body>
+</html>
