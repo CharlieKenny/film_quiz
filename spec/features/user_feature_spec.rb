@@ -28,5 +28,7 @@ feature "User can sign in and out" do
       visit('/')
       expect(page).to have_link('Sign out')
     end
-  end
+  end  
 end
+
+
