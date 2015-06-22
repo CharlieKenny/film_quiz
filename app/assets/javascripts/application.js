@@ -1,3 +1,9 @@
+// = require jquery
+// = require jquery_ujs
+// = require turbolinks
+// = require bootstrap-sprockets
+// = require_tree .
+
 window.onload = function WindowLoad(event) {
   displayFilm(selectFilm());
 };
@@ -18,3 +24,4 @@ function submitAnswer() {
     document.getElementById('result').innerHTML = 'Wrong: -1 points';
   }
 }
+

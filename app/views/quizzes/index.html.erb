@@ -5,18 +5,21 @@
   </head>
 
   <body>
+    <div id='main-container' class='container'>
+      <div class="row">
+        <div class="col-xs-3 col-lg-2">
+          <h1>Welcome to FlickQuiz</h1>
 
-    <h1>Welcome to FlickQuiz</h1>
+            Film: <div id='title'></div></br>
+            Director: <div id='director'></div></br>
+            <div id='poster'></div></br>
 
-    Film: <div id='title'></div></br>
-    Director: <div id='director'></div></br>
-    <div id='poster'></div></br>
-
-    Which year: <input id="yearGuess" type="text" name="yearGuess">
-    <input onclick="submitAnswer()"type="submit">
-    <input type="hidden" id="yearAnswer" name="yearAnswer" value="yearAnswer"/>
-
-    <div id='result'></div>
-
+            Which year: <input id="yearGuess" type="text" name="yearGuess">
+            <input onclick="submitAnswer()"type="submit">
+            <input type="hidden" id="yearAnswer" name="yearAnswer" value="yearAnswer"/>
+          <div id='result'></div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
