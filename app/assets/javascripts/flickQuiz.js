@@ -8,7 +8,9 @@ function displayFilm(film) {
       var json = JSON.parse(xmlhttp.responseText);
       document.getElementById('title').innerHTML = json["Title"];
       document.getElementById('director').innerHTML = json["Director"];
+      document.getElementById('poster').innerHTML = '<img src="' + json["Poster"] + '"/>';
       document.getElementById('yearAnswer').innerHTML = json["Year"];
+      console.log(json["Poster"]);
     }
   }
   xmlhttp.open("GET", url, true);
