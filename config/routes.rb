@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :quiz
+  resources :quizzes
   devise_for :users
   root to: "quizzes#index"
   # The priority is based upon order of creation: first created -> highest priority.
