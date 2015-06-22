@@ -20,12 +20,12 @@ As a social quizzer, so that I can show off, I would like to post my score to Fa
 Bonus Features
 -------------
 
-tracking answered/attempted questions
-leaderboard
-challenge friends
-variety of question types
-build my own quiz
-quiz timer
+tracking answered/attempted questions  
+leaderboard  
+challenge friends  
+variety of question types  
+build my own quiz  
+quiz timer  
 
 Ideas for Basic Quiz Types
 --------------------------
