@@ -1,4 +1,4 @@
-FlickQuiz - a reel good quiz for movie lovers!
+##FlickQuiz - a reel good quiz for movie lovers!
 
 User Stories
 ------------
