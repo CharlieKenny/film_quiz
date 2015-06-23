@@ -3,12 +3,17 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "quizzes#index"
 
+
    resources :users do
       member do
         post 'score'
       end
     end
 
+
+
+  get '/quiz_film', to: "quizzes#quiz_film"
+  get '/quiz_year', to: "quizzes#quiz_year"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

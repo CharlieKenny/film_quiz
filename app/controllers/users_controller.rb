@@ -11,6 +11,7 @@ class UsersController < ApplicationController
 
 
   def score
+
     @user = User.find(params[:id])
     @user.update_score(params[:reply])
     render :nothing => true, :status => 200

@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.2'
@@ -45,8 +47,10 @@ group :development, :test do
   group :test do
     gem 'rspec-rails'
     gem 'capybara'
+
     gem 'shoulda'
     gem 'rspec-collection_matchers'
+
     gem 'poltergeist'
     gem 'database_cleaner'
   end
