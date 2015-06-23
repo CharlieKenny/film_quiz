@@ -1,8 +1,12 @@
 
+
   <head>
     <script src="./assets/application.js"></script>
     <script src="./assets/flickQuiz.js"></script>
   </head>
+
+
+<html>
 
   <body>
     <div id='main-container' class='container'>
@@ -19,12 +23,13 @@
                   <br>                        
                   <h5>Which year: <br> <input id="yearGuess" type="text" name="yearGuess" class="form-control-static"></h5>
 
+
                     <br>
                     <input onclick="submitAnswer()"type="submit">
                     <input type="hidden" id="yearAnswer" name="yearAnswer" value="yearAnswer"/>
                       <div id='result'></div>
                       <br>
-                    <input id='reset' type='button' value='Play Again' onClick='window.location.reload()'>
+                    <input id='reset' type='button' value='Play Again' onClick='window.location.reload()'class='button button-3d'>
                     </div>
             </div>
           <div class="col-md-3"></div>
@@ -32,5 +37,3 @@
     </div>
   </body>
 </html>
-
-

@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js'></script>
+    <script src="./assets/application.js"></script>
+    <script src="./assets/flickQuiz2.js"></script>
+  </head>
+
+  <body>
+
+    <h1>Welcome to FlickQuiz</h1>
+    <h2>Guess The Film</h2>
+
+    Year: <div id='year'></div></br>
+    Lead actors: <div id='actors'></div></br>
+
+    Which film: <input id="filmGuess" type="text" name="filmGuess">
+    <input onclick="submitAnswer()"type="submit">
+    <input type="hidden" id="filmAnswer" name="filmAnswer" value="filmAnswer"/>
+    <input type="hidden" id="hiddenPoster" name="hiddenPoster" value="hiddenPoster"/>
+
+    <div id='result'></div>
+
+    <div id='answer'></div>
+
+    <div id='poster'></div>
+
+    <input id='reset' type='button' value='Play Again' onClick='newFilm()'>
+
+  </body>
+</html>
