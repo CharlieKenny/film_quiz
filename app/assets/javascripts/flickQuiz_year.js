@@ -9,10 +9,10 @@ function displayFilm(film) {
       $("#input").hide();
       $("#title").hide();
       $("#director").hide();
-      $("#title").html('Film: ' + json["Title"]).fadeIn(400, function() {
-        $("#director").html('Director: ' + json["Director"]).fadeIn(400, function() {
-          $("#poster").hide().html('<img src="' + json["Poster"] + '"/>').fadeIn(400, function() {
-            $("#input").fadeIn(400);
+      $("#title").html('Film: ' + json["Title"]).fadeIn(200, function() {
+        $("#director").html('Director: ' + json["Director"]).fadeIn(200, function() {
+          $("#poster").hide().html('<img src="' + json["Poster"] + '"/>').fadeIn(200, function() {
+            $("#input").fadeIn(200);
           });
         });
       });
@@ -27,28 +27,28 @@ function submitAnswer() {
   var yearAnswer = $("#yearAnswer").text();
   var yearGuess = $("#yearGuess").val();
   if(yearGuess == yearAnswer) {
-    $("#result").hide().html('Correct!').fadeIn(400, function() {
-      $("#answer").hide().html('Released in ' + yearAnswer).fadeIn(400, function() {
-        $("#reset").fadeIn(400);
+    $("#result").hide().html('Correct!').fadeIn(200, function() {
+      $("#answer").hide().html('Released in ' + yearAnswer).fadeIn(200, function() {
+        $("#reset").fadeIn(200);
       });
     });
   } else {
-    $("#result").hide().html('Wrong!').fadeIn(400, function() {
-      $("#answer").hide().html('Released in ' + yearAnswer).fadeIn(400, function() {
-        $("#reset").fadeIn(400);
+    $("#result").hide().html('Wrong!').fadeIn(200, function() {
+      $("#answer").hide().html('Released in ' + yearAnswer).fadeIn(200, function() {
+        $("#reset").fadeIn(200);
       });
     });
   }
 };
 
 function newFilm() {
-  $("#reset").fadeOut(400, function() {
-    $("#answer").fadeOut(400, function() {
-      $("#result").fadeOut(400, function() {
-        $("#input").fadeOut(400, function() {
-          $("#poster").fadeOut(400, function() {
-            $("#director").fadeOut(400, function() {
-              $("#title").fadeOut(400, function() {
+  $("#reset").fadeOut(200, function() {
+    $("#answer").fadeOut(200, function() {
+      $("#result").fadeOut(200, function() {
+        $("#input").fadeOut(200, function() {
+          $("#poster").fadeOut(200, function() {
+            $("#director").fadeOut(200, function() {
+              $("#title").fadeOut(200, function() {
                 $("#title").html('');
                 $("#director").html('');
                 $("#result").html('');
