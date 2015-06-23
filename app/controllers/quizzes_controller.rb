@@ -2,7 +2,8 @@ class QuizzesController < ApplicationController
 
   def index
      @quiz = Quiz.first
-
+     current_user.score = 3
+     @score = current_user.score
   end
 
   def new 

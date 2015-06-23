@@ -9,7 +9,7 @@ feature "playing a new quiz" do
     sign_up('test@test.com', 'password')
   end
   context "a new user starts to play" do
-    scenario 'has a total score equal to 0' do
+    scenario 'has a total score equal to 0', js: true do
       visit '/quizzes'
       click_link 'New Quiz'
       expect(page).to have_content 'Total score: 0'
