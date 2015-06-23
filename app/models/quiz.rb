@@ -3,6 +3,7 @@ class Quiz < ActiveRecord::Base
   LOSEPOINTS = -1
 
   def update_score(value)
+    puts "here"
     score = current_user.score
     if value
       if score !nil

@@ -7,9 +7,3 @@
     Total score: <%= @score %>
   <% end %>
 <% end %>
-
-<% if !@quiz %>
-  <%= link_to "New Quiz", quizzes_path, method: :post %></br>
-<% else %> 
-  <% @quiz %>  
-<% end %>
