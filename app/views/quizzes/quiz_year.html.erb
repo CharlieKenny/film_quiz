@@ -19,11 +19,13 @@
                   <div id='poster'class='img-thumbnail' ></div>
                   <br>
                     <div class="form-group">
-                  <br>                        
+                  <br> 
+                  <div id="input">                       
                   <h5>Which year: <br> <input id="yearGuess" type="text" name="yearGuess" class="form-control-static"></h5>
                     <br>
                     <input onclick="submitAnswer()"type="submit" class='btn btn-info'>
                     <input type="hidden" id="yearAnswer" name="yearAnswer" value="yearAnswer"/>
+                  </div>
                       <div id='result'></div>
                       <br>
                       <div id='answer'></div>
@@ -31,6 +33,7 @@
                     <input id='reset' type='button' value='Play Again' onClick='newFilm()'class='btn btn-info'>
                     </div>
             </div>
+
           <div class="col-md-3"></div>
       </div>
     </div>
