@@ -1,3 +1,22 @@
+body
+  background: url('https://oneroomwithaview.files.wordpress.com/2013/02/luke-and-the-pillows.jpg')
+  background-repeat: no-repeat
+  background-size: cover
+body:before
+  content: ""
+  position: absolute
+  background: url(https://oneroomwithaview.files.wordpress.com/2013/02/luke-and-the-pillows.jpg)
+  background-size: cover
+  z-index: -1 /* Keep the background behind the content */
+  height: 20%
+  width: 20% /* Using Glen Maddern's trick /via @mente */
+
+  /* don't forget to use the prefixes you need */
+  transform: scale(5)
+  transform-origin: top left
+  filter: blur(1px)
+
+
 
 
 /*
@@ -18,3 +37,4 @@
 
 @import "bootstrap-sprockets"
 @import "bootstrap"
+
