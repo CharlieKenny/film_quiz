@@ -17,14 +17,14 @@ function displayFilm(film) {
 };
 
 function submitAnswer() {
-  var yearAnswer = document.getElementById('yearAnswer').innerText;
-  var yearGuess = document.getElementById('yearGuess').value;
+  var yearAnswer = $("#yearAnswer").text();
+  var yearGuess = $("#yearGuess").val();
   if(yearGuess == yearAnswer) {
-    document.getElementById('result').innerHTML = 'Correct: +5 points';
+    $("#result").html('Correct!');
   } else {
-    document.getElementById('result').innerHTML = 'Wrong: -1 points';
+    $("#result").html('Wrong!');
   }
-  document.getElementById('answer').innerHTML = 'Released in ' + yearAnswer;
+  $("#answer").html('Released in ' + yearAnswer);
   $("#reset").show();
 };
 
