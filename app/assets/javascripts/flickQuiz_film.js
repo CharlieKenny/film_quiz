@@ -17,16 +17,16 @@ function displayFilm(film) {
 };
 
 function submitAnswer() {
-  var filmAnswer = document.getElementById('filmAnswer').innerText;
+  var filmAnswer = $("#filmAnswer").text();
   var filmGuess = $("#filmGuess").val();
-  var poster = document.getElementById('hiddenPoster').innerText;
+  var poster = $("#hiddenPoster").text();
   if(filmGuess == filmAnswer) {
-    $("#result").html('Correct: +5 points');
+    $("#result").html('Correct!');
   } else {
-    $("#result").html('Wrong: -1 points');
+    $("#result").html('Wrong!');
   }
-  document.getElementById('answer').innerHTML = 'The film is ' + filmAnswer;
-  document.getElementById('poster').innerHTML = '<img src="' + poster + '"/>';
+  $("#answer").html('The film is ' + filmAnswer);
+  $("#poster").html('<img src="' + poster + '"/>');
   $("#reset").show();
 };
 

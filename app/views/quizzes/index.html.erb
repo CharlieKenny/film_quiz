@@ -10,30 +10,20 @@
 
   <body>
     <div id='main-container' class='container'>
-      <div class="row">
+      <div class="row text-center">
         <div class='col-md-3'>
           </div>
             <div class="col-md-6 row text-center jumbotron">
-              <h1>Welcome to FlickQuiz</h1>
-                <h5>Film: <div id='title'></div></h5></br>
-                <h5>Director: <div id='director'></div></h5></br>
-                  <div id='poster'class='img-thumbnail' ></div>
-                  <br>
-                    <div class="form-group">
-                  <br>                        
-                  <h5>Which year: <br> <input id="yearGuess" type="text" name="yearGuess" class="form-control-static"></h5>
-
-
-                    <br>
-                    <input onclick="submitAnswer()"type="submit">
-                    <input type="hidden" id="yearAnswer" name="yearAnswer" value="yearAnswer"/>
-                      <div id='result'></div>
-                      <br>
-                    <input id='reset' type='button' value='Play Again' onClick='window.location.reload()'class='button button-3d'>
-                    </div>
+              <h1>Welcome to FlickQuiz!</h1><br>
+                
+                <%= link_to 'Guess The Year', quiz_year_path, class: 'btn btn-info' %>
+                <%= link_to 'Guess The Film', quiz_film_path, class: 'btn btn-info' %>
+                
             </div>
           <div class="col-md-3"></div>
       </div>
     </div>
+
+
   </body>
 </html>
