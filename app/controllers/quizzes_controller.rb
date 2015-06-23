@@ -1,9 +1,8 @@
 class QuizzesController < ApplicationController
+  before_action :authenticate_user!, :except => [:index, :show]
 
   def index
-     @quiz = Quiz.first
-     current_user.score = 3
-     @score = current_user.score
+    @quiz = Quiz.find(params[:id])
   end
 
   def new 
@@ -17,7 +16,10 @@ class QuizzesController < ApplicationController
 
   def show
     @quiz = Quiz.find(params[:id])
+  end
 
+  def update
+    update_score(params[:answer])
   end
 
 end
