@@ -1,5 +1,6 @@
 window.onload = function WindowLoad(event) {
   displayFilm(selectFilm());
+  $("#reset").hide();
 };
 
 function updateFilmInfo() {
@@ -10,11 +11,11 @@ function updateFilmInfo() {
 function submitAnswer() {
   var yearAnswer = document.getElementById('yearAnswer').innerText;
   var yearGuess = document.getElementById('yearGuess').value;
-  console.log(yearAnswer);
-  console.log(yearGuess);
   if(yearGuess == yearAnswer) {
-    document.getElementById('result').innerHTML = 'Correct: 10 points';
+    document.getElementById('result').innerHTML = 'Correct: -1 points';
   } else {
     document.getElementById('result').innerHTML = 'Wrong: -1 points';
   }
+  document.getElementById('answer').innerHTML = 'Released in ' + yearAnswer;
+  $("#reset").show();
 }
