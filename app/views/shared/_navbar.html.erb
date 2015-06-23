@@ -1,0 +1,20 @@
+<html>
+ <body>
+      <div id="main-container" class="container">
+        <div class="row">
+          <div class="col-xs-3">
+            <% if user_signed_in? %>
+                <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: 'btn btn-info' %>
+                <td><%= link_to "New Game", new_quiz_path, 'btn btn-success btn-lg' %></td>
+            <% else %>
+                <%= link_to "Sign in", new_user_session_path, class: 'btn btn-info' %>
+                <%= link_to "Sign up", new_user_registration_path, class: 'btn btn-info' %>
+            <% end %>
+                <%= link_to "Home", quizzes_path, class: 'btn btn-primary'  %>
+          </div>
+            <div class="col-xs-9">
+               </div>
+          </div>
+        </div>
+    </body>
+</html>

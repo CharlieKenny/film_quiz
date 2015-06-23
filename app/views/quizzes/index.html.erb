@@ -1,4 +1,4 @@
-<html>
+
   <head>
     <script src="./assets/application.js"></script>
     <script src="./assets/flickQuiz.js"></script>
@@ -12,14 +12,20 @@
 
             Film: <div id='title'></div></br>
             Director: <div id='director'></div></br>
-            <div id='poster'></div></br>
-
-            Which year: <input id="yearGuess" type="text" name="yearGuess">
+            <div id='poster' class='col-xs-6 col-md-3'>
+            <a href="www.imdb.com" class="thumbnail"></a>
+            </div>
+            </br>
+            <div class="form-group">
+            Which year: <input id="yearGuess" type="text" name="yearGuess" class="form-control">
             <input onclick="submitAnswer()"type="submit">
             <input type="hidden" id="yearAnswer" name="yearAnswer" value="yearAnswer"/>
+          </div>
           <div id='result'></div>
         </div>
       </div>
     </div>
   </body>
 </html>
+
+
