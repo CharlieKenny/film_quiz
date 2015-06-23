@@ -20,14 +20,16 @@ function submitAnswer() {
   var filmAnswer = $("#filmAnswer").text();
   var filmGuess = $("#filmGuess").val();
   var poster = $("#hiddenPoster").text();
-  if(filmGuess == filmAnswer) {
+  if(filmGuess.toLowerCase() == filmAnswer.toLowerCase()) {
     $("#result").html('Correct!');
   } else {
     $("#result").html('Wrong!');
   }
   $("#answer").html('The film is ' + filmAnswer);
+  $("#poster").hide();
   $("#poster").html('<img src="' + poster + '"/>');
-  $("#reset").show();
+  $("#poster").fadeIn(1000);
+  $("#reset").fadeIn(1000);
 };
 
 function newFilm() {

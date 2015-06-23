@@ -6,9 +6,16 @@ function displayFilm(film) {
   xmlhttp.onreadystatechange = function() {
     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
       var json = JSON.parse(xmlhttp.responseText);
-      $("#title").html(json["Title"]);
-      $("#director").html(json["Director"]);
-      $("#poster").html('<img src="' + json["Poster"] + '"/>');
+      $("#input").hide();
+      $("#title").hide();
+      $("#director").hide();
+      $("#title").html('Film: ' + json["Title"]).fadeIn(400, function() {
+        $("#director").html('Director: ' + json["Director"]).fadeIn(400, function() {
+          $("#poster").hide().html('<img src="' + json["Poster"] + '"/>').fadeIn(400, function() {
+            $("#input").fadeIn(400);
+          });
+        });
+      });
       $("#yearAnswer").html(json["Year"]);
     }
   }
@@ -20,18 +27,39 @@ function submitAnswer() {
   var yearAnswer = $("#yearAnswer").text();
   var yearGuess = $("#yearGuess").val();
   if(yearGuess == yearAnswer) {
-    $("#result").html('Correct!');
+    $("#result").hide().html('Correct!').fadeIn(400, function() {
+      $("#answer").hide().html('Released in ' + yearAnswer).fadeIn(400, function() {
+        $("#reset").fadeIn(400);
+      });
+    });
   } else {
-    $("#result").html('Wrong!');
+    $("#result").hide().html('Wrong!').fadeIn(400, function() {
+      $("#answer").hide().html('Released in ' + yearAnswer).fadeIn(400, function() {
+        $("#reset").fadeIn(400);
+      });
+    });
   }
-  $("#answer").html('Released in ' + yearAnswer);
-  $("#reset").show();
 };
 
 function newFilm() {
-  displayFilm(selectFilm());
-  $("#reset").hide();
-  $("#result").html('');
-  $("#answer").html('');
-  $("#yearGuess").val('');
+  $("#reset").fadeOut(400, function() {
+    $("#answer").fadeOut(400, function() {
+      $("#result").fadeOut(400, function() {
+        $("#input").fadeOut(400, function() {
+          $("#poster").fadeOut(400, function() {
+            $("#director").fadeOut(400, function() {
+              $("#title").fadeOut(400, function() {
+                $("#title").html('');
+                $("#director").html('');
+                $("#result").html('');
+                $("#answer").html('');
+                $("#yearGuess").val('');
+                displayFilm(selectFilm());
+              });
+            });
+          });
+        });
+      });
+    });
+  })
 };
